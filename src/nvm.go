@@ -254,6 +254,7 @@ func install(version string, cpuarch string) {
       os.RemoveAll(tempDir)
 
       fmt.Println("\n\nInstallation complete. If you want to use this version, type\n\nnvm use "+version)
+      use(version, "")
     } else {
       fmt.Println("Could not download npm for node v"+version+".")
       fmt.Println("Please visit https://github.com/npm/npm/releases/tag/v"+npmv+" to download npm.")
